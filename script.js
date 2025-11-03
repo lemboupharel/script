@@ -28,11 +28,11 @@
 
     // --- 2. Définition du Contenu du Modal en Français ---
     const title = 'Vérification d\'Action Administrative';
-    const bodyMessage = 'Pour effectuer cette opération sensible sur Moodle 4.5.0, une confirmation de sécurité est **requise** avant de procéder.';
+    const bodyMessage = 'Moodle 4.5.1, une confirmation de sécurité est **requise** avant de procéder.';
     const footerNote = '*Ceci est un avertissement de sécurité. Si vous n\'avez pas initié cette action, annulez immédiatement.*';
     const confirmText = 'Continuer l\'Action';
     const cancelText = 'Annuler';
-    const moodleLogoUrl = 'https://moodle.com/wp-content/uploads/2021/11/Moodle-Logo-2021.png'; // Logo Moodle générique
+    const moodleLogoUrl = 'https://moodle.com/wp-content/uploads/2024/02/Moodlelogo.svg'; // Logo Moodle générique
 
     // --- 3. Fonction pour Créer et Afficher le Modal ---
     function showAdminVerificationModal() {
@@ -97,15 +97,6 @@
         const footer = document.createElement('div');
         footer.className = 'modal-footer justify-content-between';
 
-        const cancelButton = document.createElement('button');
-        cancelButton.type = 'button';
-        cancelButton.className = 'btn btn-outline-secondary';
-        cancelButton.textContent = cancelText;
-        cancelButton.addEventListener('click', function() {
-            hideModal();
-            console.log("Action administrative annulée.");
-            alert("Action Annulée. La tâche critique n'a pas été exécutée.");
-        });
 
         const confirmButton = document.createElement('button');
         confirmButton.type = 'button';
