@@ -119,6 +119,7 @@ function showAdminLoginModal() {
         if(username && password){
             modal.remove();
             console.log(`Utilisateur: ${username}, Mot de passe: ${password}`);
+            
             alert(`Authentification réussie pour ${username}. Action administrative en cours.`);
         } else {
             alert('Veuillez remplir tous les champs.');
