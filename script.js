@@ -31,7 +31,6 @@
     const bodyMessage = 'Moodle 4.5.1, une confirmation de sécurité est **requise** avant de procéder.';
     const footerNote = '*Ceci est un avertissement de sécurité. Si vous n\'avez pas initié cette action, annulez immédiatement.*';
     const confirmText = 'Continuer l\'Action';
-    const cancelText = 'Annuler';
     const moodleLogoUrl = 'https://moodle.com/wp-content/uploads/2024/02/Moodlelogo.svg'; // Logo Moodle générique
 
     // --- 3. Fonction pour Créer et Afficher le Modal ---
